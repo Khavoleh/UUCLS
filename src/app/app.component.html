@@ -1,18 +1,48 @@
 <nav>
     <ul>
         <li><a routerLink="">Головна</a></li>
+        
+        <div class="dropdown">
+            <button class="dropdown-button">Інформація про організацію</button>
+            <div class="dropdown-content">
+                <ul>
+                  <li><a routerLink="mission">Місія</a></li>
+                  <li><a routerLink="values">Цінності</a></li>
+                  <li><a routerLink="vision">Бачення</a></li>
+                  <li><a routerLink="strategic-goals">Стратегічні цілі</a></li>
+                  <li><a routerLink="official-documents">Офіційні документи</a></li>
+                </ul>
+            </div>
+        </div>
 
-        <li><a href="#">Інформація про організацію</a></li>
+        <div class="dropdown">
+            <button class="dropdown-button">Команда</button>
+            <div class="dropdown-content">
+                <ul>
+                  <li><a routerLink="head">Керівник</a></li>
+                  <li><a routerLink="deputy">Заступники</a></li>
+                  <li><a routerLink="representatives">Представники</a></li>
+                </ul>
+            </div>
+        </div>
         
-        <li><a href="#">Команда</a></li>
+        <li><a routerLink="news">Новини</a></li>
         
-        <li><a href="#">Новини</a></li>
+        <div class="dropdown">
+            <button class="dropdown-button">Галерея</button>
+            <div class="dropdown-content">
+                <ul>
+                  <li><a routerLink="specialists-professional-publications">Фахові публікації</a></li>
+                  <li><a routerLink="meetings-media-content">Конференції</a></li>
+                </ul>
+            </div>
+        </div>
         
-        <li><a href="#">Галерея</a></li>
+        <li><a routerLink="membership">Членство</a></li>
         
-        <li><a href="#">Членство</a></li>
-        
-        <li><a href="#">Партнери</a></li>
+        <li><a routerLink="partners">Партнери</a></li>
+
+        <li><a routerLink="contacts">Контакти</a></li>
     </ul>
 </nav>
 <router-outlet></router-outlet>
