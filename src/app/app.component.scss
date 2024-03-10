@@ -1,3 +1,4 @@
+/* --NAVIGATION-- */
 nav {
     background-color: #001123;
     
@@ -15,17 +16,18 @@ nav ul {
     height: 100%;
 }
 
-nav li {
+header li {
     display: flex;
     
     align-items: center;
+    justify-content: center;
 
     padding: 0 2rem;
 
     transition: all 0.2s;
 }
 
-nav a {
+header li a {
     text-decoration: none;
     
     color: white;
@@ -35,7 +37,7 @@ nav a {
     opacity: 0.7; 
 }
 
-nav li:hover {
+header li:hover {
     background-color: #00366f;
 }
 
@@ -43,6 +45,8 @@ nav li:hover > a {
     opacity: 1;
 }
 
+/* --NAV-DROPDOWNS-- */
+/* #region Dropdowns*/
 .dropdown {
     padding: 0;
     margin: 0;
@@ -83,9 +87,77 @@ nav li:hover > a {
 .dropdown:hover .dropdown-content {
     display: inline;
 }
+/* #endregion */
 
-@media (min-width: 1025px) {
+/* --BURGER-MENU-- */
+.burger-menu-button {
+    background: none;
+    outline: none;
+    border: none;
+    
+    background-color: #001123;
+    
+    width: 6rem;
+    height: 6rem;
+    padding: 1rem;
 
+    margin-left: auto;
+    margin-right: 0;
+
+    cursor: pointer;
+    position: relative;
+    display: none;
+}
+
+.burger-menu-button .bar,
+.burger-menu-button::after, .burger-menu-button::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 8px;
+    background-color: #b3b8bd; 
+    margin: 11px 0px;
+    transition: 0.4s;
+    border-radius: 2px;
+}
+
+.burger-menu-button.is-active::before {
+    transform: rotate(-45deg) translate(-12px, 12px);
+}
+
+.burger-menu-button.is-active::after {
+    transform: rotate(45deg) translate(-15px, -15px);
+}
+
+.burger-menu-button.is-active .bar {
+    opacity: 0;
+}
+
+.mobile-menu {
+    background-color: #001123;
+
+    display: none;
+    transition: 0.5s;
+}
+
+.mobile-menu li {
+    padding: 1rem 0;
+}
+
+@media (max-width: 1288px) {
+    nav {
+        display: none;
+    }
+    .burger-menu-button {
+        display: block;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.hidden {
+    display: none;
 }
 
 @media (min-width: 768) and (max-width: 1024) {
